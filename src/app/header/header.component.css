@@ -1,0 +1,14 @@
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-image: url('../../../img/10882161.jpg'); /* Updated path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.3rem;
+    text-align: center;
+    color: white;
+}
+
+.slightly-lighter {
+    font-weight: 400; /* Adjust this value to achieve the desired lightness */
+}
