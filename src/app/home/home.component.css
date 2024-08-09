@@ -1,0 +1,15 @@
+.profile-picture {
+    width: 256px; /* Adjust the width as needed */
+    height: 256px; /* Adjust the height as needed */
+    background-image: url('../../assets/default-profile-picture-png.png');
+    background-size: cover; /* Ensure the image covers the entire div */
+    background-position: center; /* Center the image */
+    border-radius: 50%; /* Make it a circle if desired */
+    margin: 0 auto; /* Center the div horizontally */
+}
+
+.left-align {
+    text-align: left;
+    /* font-size: 24px; */
+    font-family: 'Roboto', sans-serif; /* Apply the Google Font */
+}
