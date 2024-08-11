@@ -12,7 +12,7 @@ export class ProjectsService {
       summary: 'Extracts expense data stored in notion, interprets it using LLM Agent and triggers a periodic notification',
       description: 'A automation pipeline for extracting expense data from NotionDB, analysing with LLM Agent (powered by GPT-4) and triggering a telegram bot message',
       projectLink: 'https://github.com/whanyu1212/expense-notify',
-      pictures: [],
+      pictures: ['https://imgur.com/x4vfnJX.png', 'https://imgur.com/HJh7AjT.png','https://imgur.com/1bNL0Ft.png'],
       tags: [Tag.PYTHON, Tag.LLM]
     },
     {
@@ -21,7 +21,7 @@ export class ProjectsService {
       summary: 'AI-powered travel planning agent that crafts personalized itineraries, suggests destinations tailored to your interests',
       description: 'Detailed description of project two',
       projectLink: 'https://github.com/whanyu1212/JourneyCraftAI',
-      pictures: [],
+      pictures: ['https://imgur.com/x4vfnJX.png', 'https://imgur.com/HJh7AjT.png','https://imgur.com/1bNL0Ft.png'],
       tags: [Tag.PYTHON, Tag.LLM]
     },
   ];
