@@ -1,4 +1,82 @@
 <div class="container">
+    <div class="mb-2">
+        <div>
+            <button class = "btn btn-outline-primary mb-2 me-2" (click)="isCollapsed = !isCollapsed">Filter</button>
+            <button class="btn btn-outline-secondary mb-2" (click)="ResetFilters()" [hidden]="!filtering">Reset</button>
+        </div>
+        <div [collapse]="isCollapsed" [isAnimated]="true">
+            <div class="border mb-2 shadow-sm" style="width: 250px;">
+                <form>
+                    <div class="row mx-0">
+                        <div class="col">
+                            <small><b>Frameworks:</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input 
+                                    type="checkbox" 
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="angular"
+                                    (change)="Filter()"
+                                    name="Angular">
+                                    <label class="form-check-label small">Angular</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                    type="checkbox" 
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="react"
+                                    (change)="Filter()"
+                                    name="React">
+                                    <label class="form-check-label small">React</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                    type="checkbox" 
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="llm"
+                                    (change)="Filter()"
+                                    name="LLM">
+                                    <label class="form-check-label small">LLM related</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <small><b>Languages:</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input 
+                                    type="checkbox" 
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="python"
+                                    (change)="Filter()"
+                                    name="Python">
+                                    <label class="form-check-label small">Python</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                    type="checkbox" 
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="typescript"
+                                    (change)="Filter()"
+                                    name="TypeScript">
+                                    <label class="form-check-label small">TypeScript</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                    type="checkbox" 
+                                    class="form-check-input position-static me-2"
+                                    [(ngModel)]="julia"
+                                    (change)="Filter()"
+                                    name="Julia">
+                                    <label class="form-check-label small">Julia</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div *ngFor="let project of projects" class="col-lg-4 col-md-6 mb-4" style="max-width: 380px; min-width: 380px;">
             <app-project-card [project]="project">

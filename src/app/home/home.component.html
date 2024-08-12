@@ -13,6 +13,17 @@
         <div class="col-lg shadow border m-1" style="border-radius: 15px;">
             <div class="text-center">
                 <h2>Featured Projects</h2>
+                <h4>{{featuredProject.name}}</h4>
+
+                <carousel>
+                    <div *ngFor="let picture of featuredProject.pictures">
+                        <slide>
+                            <img src = {{picture}} alt = "slide" style="display: block; width: 100%">
+                        </slide>
+                    </div>
+            </carousel>
+            <p class="mt-2">{{featuredProject.description}}</p>
+            <p>Visit the Portfolio section to learn more!</p>
             </div>
         </div>
     </div>

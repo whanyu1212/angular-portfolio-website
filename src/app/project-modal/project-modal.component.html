@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h2>{{project.name}}</h2>
+    <button class = "btn-close" (click)="bsModalRef.hide()"></button>
+</div>
+
+<div class="modal-body">
+    <carousel>
+            <div *ngFor="let picture of project.pictures">
+                <slide>
+                    <img src = {{picture}} alt = "slide" style="display: block; width: 100%">
+                </slide>
+            </div>
+    </carousel>
+
+    <h3 class="mt-2">Description</h3>
+    <p>{{project.description}}</p>
+    <p>You can find this project on Github <a href={{project.projectLink}} target="_blank">here</a></p>
+
+    <hr>
+    
+    <div class = "d-flex flex-wrap">
+        <div *ngFor="let tag of project.tags">
+            <div class = "tag me-2 mb-1" [style.background-color]="tag.color">{{tag}}</div> 
+            <!-- data binding in angular-->
+        </div>
+    </div>
+</div>

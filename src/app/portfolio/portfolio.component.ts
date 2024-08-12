@@ -1,37 +1,85 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../_models/Project';
 import { Tag } from '../_models/Tag';
+import { ProjectsService } from '../_services/projects.service';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.css'
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
   
-  projects: Project[] = [
-    {
-      id: 0,
-      name: 'Expense Notifier',
-      summary: 'Extracts expense data stored in notion, interprets it using LLM Agent and triggers a periodic notification',
-      description: 'A automation pipeline for extracting expense data from NotionDB, analysing with LLM Agent (powered by GPT-4) and triggering a telegram bot message',
-      projectLink: 'https://github.com/whanyu1212/expense-notify',
-      pictures: [],
-      tags: [Tag.PYTHON, Tag.LLM]
-    },
-    {
-      id: 1,
-      name: 'JourneyCraftAI',
-      summary: 'AI-powered travel planning agent that crafts personalized itineraries, suggests destinations tailored to your interests',
-      description: 'Detailed description of project two',
-      projectLink: 'https://github.com/whanyu1212/JourneyCraftAI',
-      pictures: [],
-      tags: [Tag.PYTHON, Tag.LLM]
-    },
-  ];
-  constructor(private titleService: Title) {
+  projects = {} as  Project[];
+
+  isCollapsed: boolean = true;
+  filtering: boolean = false;
+
+
+
+  typescript: boolean = false;
+  python: boolean = false;
+  julia: boolean = false;
+  angular: boolean = false;
+  llm: boolean = false;
+  react: boolean = false;
+
+
+  constructor(private titleService: Title, private projectsService: ProjectsService) {
     this.titleService.setTitle('Hanyu - Portfolio');
 
   }  
+  ngOnInit(): void {
+    this.projects = this.projectsService.getProjects();
+  }
+
+  Filter(){
+    let filterTags: Tag[] = [];
+
+    if (this.typescript){
+      filterTags.push(Tag.TYPESCRIPT);
+    }
+
+    if (this.python){
+      filterTags.push(Tag.PYTHON);
+    }
+
+    if (this.julia){
+      filterTags.push(Tag.JULIA);
+    }
+
+    if (this.angular){
+      filterTags.push(Tag.ANGULAR);
+    }
+
+    if (this.llm){
+      filterTags.push(Tag.LLM);
+    }
+
+    if (this.react){
+      filterTags.push(Tag.REACT);
+    }
+
+    if (this.python || this.julia || this.angular || this.llm || this.react || this.typescript){
+      this.filtering = true;
+    }
+    else{
+      this.filtering = false;
+    }
+
+    this.projects = this.projectsService.getProjectsByFilter(filterTags);
+  }
+
+
+  ResetFilters(){
+    this.typescript = false;
+    this.python = false;
+    this.julia = false;
+    this.angular = false;
+    this.llm = false;
+    this.react = false;
+    this.filtering = false;
+    this.projects = this.projectsService.getProjects();
+  }
 }
