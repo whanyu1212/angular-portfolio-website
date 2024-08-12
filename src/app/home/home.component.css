@@ -1,6 +1,6 @@
 .profile-picture {
-    width: 256px; /* Adjust the width as needed */
-    height: 256px; /* Adjust the height as needed */
+    width: 512px; /* Adjust the width as needed */
+    height: 512px; /* Adjust the height as needed */
     background-image: url('../../assets/default-profile-picture-png.png');
     background-size: cover; /* Ensure the image covers the entire div */
     background-position: center; /* Center the image */
