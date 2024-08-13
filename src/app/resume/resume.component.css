@@ -32,11 +32,12 @@
 }
 
 .education-item {
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    background-color: #ecf0f1;
+    border-left: 4px solid #3498db;
     border-radius: 10px;
     padding: 15px;
     margin: 10px 0;
-    color: #fff;
+    color: #2c3e50;
     font-family: 'Arial', sans-serif;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -53,8 +54,9 @@
 .education-item br {
     margin-bottom: 10px;
 }
+
 .skill-item {
-    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    background: linear-gradient(135deg, #6a8fdc 0%, #3a4a6b 100%);
     border-radius: 5px;
     padding: 10px;
     margin: 10px 10px 10px 0; /* Add spacing between skills */
@@ -67,5 +69,5 @@
 
 .skill-item:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, #182848 0%, #4b6cb7 100%);
+    background: linear-gradient(135deg, #3a4a6b 0%, #6a8fdc 100%);
 }
