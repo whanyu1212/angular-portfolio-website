@@ -12,14 +12,14 @@ export class ProjectsService {
       summary: 'Extracts expense data stored in notion, interprets it using LLM Agent and triggers a periodic notification',
       description: 'A automation pipeline for extracting expense data from NotionDB, analysing with LLM Agent (powered by GPT-4) and triggering a telegram bot message',
       projectLink: 'https://github.com/whanyu1212/expense-notify',
-      pictures: ['https://imgur.com/x4vfnJX.png', 'https://imgur.com/HJh7AjT.png','https://imgur.com/1bNL0Ft.png'],
+      pictures: ['https://i.imgur.com/P0jeAyG.png'],
       tags: [Tag.PYTHON, Tag.LLM]
     },
     {
       id: 1,
       name: 'JourneyCraftAI',
       summary: 'AI-powered travel planning agent that crafts personalized itineraries, suggests destinations tailored to your interests',
-      description: 'Detailed description of project two',
+      description: 'Multi-agent system that crafts personalized travel itineraries, suggests destinations tailored to your interests and constraints',
       projectLink: 'https://github.com/whanyu1212/JourneyCraftAI',
       pictures: ['https://imgur.com/x4vfnJX.png', 'https://imgur.com/HJh7AjT.png','https://imgur.com/1bNL0Ft.png'],
       tags: [Tag.PYTHON, Tag.LLM]
@@ -28,7 +28,7 @@ export class ProjectsService {
       id: 2,
       name: 'Mental Gym',
       summary: 'Documenting my practices on various coding platforms such as LeetCode, Kattis, HackerRank',
-      description: 'Detailed description of project two',
+      description: 'A repository to document my practices on various coding platforms such as LeetCode, Kattis, HackerRank',
       projectLink: 'https://github.com/whanyu1212/mental-gym',
       pictures: ['https://imgur.com/x4vfnJX.png', 'https://imgur.com/HJh7AjT.png','https://imgur.com/1bNL0Ft.png'],
       tags: [Tag.PYTHON, Tag.JULIA]

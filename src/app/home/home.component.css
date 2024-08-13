@@ -1,7 +1,7 @@
 .profile-picture {
     width: 512px; /* Adjust the width as needed */
     height: 512px; /* Adjust the height as needed */
-    background-image: url('../../assets/default-profile-picture-png.png');
+    background-image: url('../../assets/profile_image.jpg');
     background-size: cover; /* Ensure the image covers the entire div */
     background-position: center; /* Center the image */
     border-radius: 50%; /* Make it a circle if desired */
@@ -11,5 +11,10 @@
 .left-align {
     text-align: left;
     /* font-size: 24px; */
-    font-family: 'Roboto', sans-serif; /* Apply the Google Font */
+    font-family: 'Pacifico', cursive; /* Apply a more artistic Google Font */
+    font-weight: bold; /* Make the text bold */
+}
+
+h1, h2 {
+    font-family: 'Lobster', cursive; /* Apply a more artistic Google Font */
 }

@@ -1,0 +1,73 @@
+.accordion-group::ng-deep .btn-link {
+    color: white;
+  }
+  
+  .accordion-group::ng-deep .card-header {
+    background-color: #007bff;
+  }
+
+
+
+.job-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+.company {
+    font-size: 1.2em;
+    color: #34495e;
+}
+.date {
+    font-size: 1em;
+    color: #7f8c8d;
+}
+.job-description {
+    text-align: left;
+    padding: 10px;
+    font-size: 1em;
+    line-height: 1.6;
+    background-color: #ecf0f1;
+    border-left: 4px solid #3498db;
+    margin-bottom: 10px;
+}
+
+.education-item {
+    background-color: #ecf0f1;
+    border-left: 4px solid #3498db;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: scale(1.05);
+}
+
+.education-item strong {
+    font-size: 1.2em;
+}
+
+.education-item br {
+    margin-bottom: 10px;
+}
+
+.skill-item {
+    background: linear-gradient(135deg, #6a8fdc 0%, #3a4a6b 100%);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 10px 10px 0; /* Add spacing between skills */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: inline-block;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #3a4a6b 0%, #6a8fdc 100%);
+}
